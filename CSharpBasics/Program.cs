@@ -7,8 +7,8 @@ namespace CSharpBasics
     {
         static void Main(string[] args)
         {
-            Collection collection = new Collection();
-            collection.LearnDictionary();
+            Square square = new Square(34.5);
+            square.Display();
 
         }
     }
