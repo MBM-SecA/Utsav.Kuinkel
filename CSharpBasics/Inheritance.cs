@@ -13,24 +13,6 @@ public abstract class Shape
 
 }
 
-public class Square : Shape
-{
-    public Square(double side)
-    {
-        Side = side;
-    }
-    public double Side { get; set; }
-    public override double GetArea() => Side * Side;
-
-    public override double GetCircumference() => 4 * Side;
-
-    public override void Display()
-    {
-        Console.WriteLine($"Area : {GetArea()}");
-        Console.WriteLine($"Circimference : {GetCircumference()}");
-    }
-}
-
 public class Rectangle : Shape
 {
     public double Length { get; set; }
@@ -46,8 +28,21 @@ public class Rectangle : Shape
     public override double GetArea() => Length * Breadth;
 
     public override double GetCircumference() => 2 * (Length + Breadth);
+
+    public override void Display()
+    {
+        Console.WriteLine($"Area : {GetArea()}");
+        Console.WriteLine($"Circimference : {GetCircumference()}");
+    }
 }
 
+public class Square : Rectangle
+{
+    public Square(double side) : base(side, side)
+    {
+
+    }
+}
 public class Circle : Shape
 {
     public double Radius { get; set; }

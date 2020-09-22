@@ -9,6 +9,8 @@ namespace CSharpBasics
         {
             Square square = new Square(34.5);
             square.Display();
+            Rectangle rectangle = new Rectangle(10, 20);
+            rectangle.Display();
 
         }
     }
