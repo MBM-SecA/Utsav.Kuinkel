@@ -6,6 +6,12 @@ namespace Assignment
     {
         static void Main(string[] args)
         {
+            Assignment2 assignment = new Assignment2();
+            assignment.CreatDirectory();
+        }
+
+        void assignment1()
+        {
             Assignment1 assignment = new Assignment1();
             do
             {
