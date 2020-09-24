@@ -1,3 +1,3 @@
 # Utsav.Kuinkel
 
-## Programmer
+## Student
