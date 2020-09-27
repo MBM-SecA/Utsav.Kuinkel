@@ -20,6 +20,14 @@ namespace LINQ
                     Console.WriteLine($"Name: {country.Name}\tContinent:{country.Continent}\tPopulation:{country.Population}\tArea:{country.Area}\tNOT INVADED");
                 }
             }
+            Console.WriteLine("Asian Countries having population less than 30 millions");
+            foreach (var country in countries)
+            {
+                if (country.Continent == "Asia" && country.Population < 30000000)
+                {
+                    Console.WriteLine($"Name: {country.Name}\tPopulation: {country.Population}");
+                }
+            }
         }
 
 

@@ -31,23 +31,23 @@ public class Country
 
     public static List<Country> GetCountries()
     {
-        Country c1 = new Country("Nepal", "Asia", 30000000, 123467.33, false);
-        Country c2 = new Country("India", "Asia", 30000000, 123467.33);
-        Country c3 = new Country("Bhutan", "Asia", 30000000, 123467.33, false);
-        Country c4 = new Country("Qatar", "Asia", 5000000, 8303.49);
-        Country c5 = new Country("Syria", "Asia", 73453345, 3827.46);
-        Country c6 = new Country("Lebanon", "Asia", 811101, 8890.42);
-        Country c7 = new Country("Japan", "Asia", 300000, 64343.345, false);
-        Country c8 = new Country("Pakisthan", "Asia", 76744364, 35263.43);
-        Country c9 = new Country("Saudi Arabia", "Asia", 5000000, 36473.72, false);
-        Country c10 = new Country("Vietnam", "Asia", 8000000, 91826.3);
-        Country c11 = new Country("Sri Lanka", "Asia", 7234234, 1827.364);
-        Country c12 = new Country("Iraq", "Asia", 900002, 887273.46);
+        Country c1 = new Country("Nepal", "Asia", 29136808, 123467.33, false);
+        Country c2 = new Country("India", "Asia", 1380004385, 123467.33);
+        Country c3 = new Country("Bhutan", "Asia", 760000, 123467.33, false);
+        Country c4 = new Country("Qatar", "Asia", 2100000, 8303.49);
+        Country c5 = new Country("Syria", "Asia", 17500658, 3827.46);
+        Country c6 = new Country("Lebanon", "Asia", 6825445, 8890.42);
+        Country c7 = new Country("Japan", "Asia", 126476461, 64343.345, false);
+        Country c8 = new Country("Pakisthan", "Asia", 220892340, 35263.43);
+        Country c9 = new Country("Saudi Arabia", "Asia", 34813871, 36473.72, false);
+        Country c10 = new Country("Vietnam", "Asia", 97338579, 91826.3);
+        Country c11 = new Country("Sri Lanka", "Asia", 21413249, 1827.364);
+        Country c12 = new Country("Iraq", "Asia", 40222493, 887273.46);
         Country c13 = new Country("England", "Europe", 30000000, 123467.33, false);
         Country c14 = new Country("France", "Europe", 30000000, 123467.33, false);
-        Country c15 = new Country("Italy", "Europe", 30000000, 123467.33, false);
+        Country c15 = new Country("Italy", "Europe", 300000, 123467.33, false);
         Country c16 = new Country("Spain", "Europe", 84000000, 948434.5, false);
-        Country c17 = new Country("Ukraine", "Europe", 700006, 36462);
+        Country c17 = new Country("Ukraine", "Europe", 70000, 36462);
         Country c18 = new Country("Germany", "Europe", 87345345, 98273, false);
         Country c19 = new Country("Canada", "North America", 7345336452, 765432.21);
         Country c20 = new Country("USA", "North America", 30000000, 123467.33);
@@ -59,7 +59,7 @@ public class Country
         Country c26 = new Country("Camoroon", "Africa", 7000000, 36462.345, false);
         Country c27 = new Country("New Zealand", "Australia", 7000000, 36462.345, false);
         Country c28 = new Country("Australia", "Australia", 7000000, 36462.345, false);
-        var countries = new List<Country> { c1, c2, c3, c4, c5, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, c17, c18, c19, c20, c21, c22, c23, c24, c25 };
+        var countries = new List<Country> { c1, c2, c3, c4, c5, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, c17, c18, c19, c20, c21, c22, c23, c24, c25, c26, c27, c28 };
 
 
         return countries;
