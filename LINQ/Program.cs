@@ -8,6 +8,24 @@ namespace LINQ
     {
         static void Main(string[] args)
         {
+            var countries = Country.GetCountries();
+
+            //HW - Is there any african country in country collection
+            var africanCountries = countries.Any(x => x.Continent == "Africa");
+            Console.WriteLine(africanCountries);
+            //HW - print first two largest asian country in ascending order 
+            var asianCountriesBySize = from country in countries
+                                       orderby country.Area descending
+                                       select country;
+            foreach (var country in asianCountriesBySize.Take(2))
+            {
+                Console.WriteLine(country.Name);
+            }
+
+        }
+
+        void general()
+        {
             // LINQ - Language Integrated Query
             // LINQ to object 
 
@@ -68,10 +86,6 @@ namespace LINQ
             {
                 Console.WriteLine(word);
             }
-
-            //HW - Is there any african country in country collection
-            //HW - print first two asian country in ascending order that are 
-
         }
     }
 }
