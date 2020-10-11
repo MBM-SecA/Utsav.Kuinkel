@@ -1,7 +1,7 @@
 @model List<Person>
 @{
   string female = "~/lib/image/female-avatar.png";
-  string male = "~/lib/image/male-avatar.png";
+  string male = "~/image/male-avatar.png";
 
 }
 <div class="card-columns">
@@ -11,7 +11,7 @@
 <div class="card" style="width: 18rem;">
   @{if (@employee.Gender == 'M')
   {
-    <img src=Url.Content(~/image/female-avatar.png ) class="card-img-top" alt="...">   
+    <img src="@Url.Content(male)" class="card-img-top" alt="...">   
   }
   else 
   {
