@@ -26,5 +26,10 @@ public class EmployeeController : Controller
         return View(employees);
     }
 
+    public ActionResult Detail(string firstName)
+    {
+        return View();
+    }
+
 
 }

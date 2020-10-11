@@ -1,4 +1,7 @@
 @model List<Person>
+@{
+    ViewData["Title"] = "Employees";
+}
 
 
 
@@ -18,7 +21,11 @@
     @foreach (var employee in Model)
     {
         <tr scope="row">
-            <td>@employee.FirstName</td>
+            <td>
+              <a href="/employee/detail?firstName=@employee.FirstName&lastname=@employee.LastName">
+                @employee.FirstName
+              </a>
+            </td>
             <td>@employee.LastName</td>
             <td>@employee.Address</td>
             <td>@employee.Gender</td>
