@@ -1,4 +1,13 @@
 @model List<Person>
 @{
-    ViewData["Title"] = "Employees";
+    ViewData["Title"] = Model.First().FirstName;
 }
+
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">@Model.First().FirstName @Model.First().LastName</h5>
+    <p class="card-text">Hello! I am @Model.First().FirstName @Model.First().LastName, I live in @Model.First().Address and I just earn Rs.@Model.First().Salary</p>
+    <a asp-controller="Employee" asp-action="Index" class="btn btn-primary">List of Employees</a>
+  </div>
+</div>
