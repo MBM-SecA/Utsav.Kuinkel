@@ -12,6 +12,12 @@ public class EmployeeController : Controller
         return View(employees);
     }
 
+    public ActionResult CardList()
+    {
+        List<Person> employees = Person.GetPerson();
+        return View(employees);
+    }
+
     public ActionResult Detail(int id)
     {
         List<Person> employees = Person.GetPerson();
@@ -20,6 +26,7 @@ public class EmployeeController : Controller
         var requiredEmployee = employee.ToList();
         return View(requiredEmployee);
     }
+
 
 
 }

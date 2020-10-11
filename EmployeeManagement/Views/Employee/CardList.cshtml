@@ -1,0 +1,29 @@
+@model List<Person>
+@{
+  string female = "~/lib/image/female-avatar.png";
+  string male = "~/lib/image/male-avatar.png";
+
+}
+<div class="card-columns">
+@foreach (var employee in Model)
+{
+  
+<div class="card" style="width: 18rem;">
+  @{if (@employee.Gender == 'M')
+  {
+    <img src=Url.Content(~/image/female-avatar.png ) class="card-img-top" alt="...">   
+  }
+  else 
+  {
+    <img src=Url.Content( @female ) class="card-img-top" alt="...">   
+  }
+  }
+  
+  <div class="card-body">
+    <h5 class="card-title">@employee.FirstName @employee.LastName</h5>
+    <p class="card-text">Hello! I am @employee.FirstName @employee.LastName, I live in @employee.Address and I just earn Rs.@employee.Salary</p>
+    <a asp-controller="Employee" asp-action="Detail" asp-route-id="@employee.Id" class="btn btn-primary">Details</a>
+  </div>
+</div>
+}
+</div>
