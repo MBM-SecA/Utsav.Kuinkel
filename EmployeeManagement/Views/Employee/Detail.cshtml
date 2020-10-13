@@ -1,13 +1,13 @@
-@model List<Person>
+@model Person
 @{
-    ViewData["Title"] = Model.First().FirstName;
+  string FullName = Model.FirstName + " " + Model.LastName;
+  ViewData["Title"] = FullName;
 }
 
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">@Model.First().FirstName @Model.First().LastName</h5>
-    <p class="card-text">Hello! I am @Model.First().FirstName @Model.First().LastName, I live in @Model.First().Address and I just earn Rs.@Model.First().Salary</p>
-    <a asp-controller="Employee" asp-action="Index" class="btn btn-primary">List of Employees</a>
-  </div>
+<div class="jumbotron">
+  <h1 class="display-4">@FullName</h1>
+  <p class="lead">I am @FullName, I live in @Model.Address, and I earn about Rs. @Model.Salary from this company.</p>
+  <hr class="my-4">
+  <p>I am just one employee of this company. You can view my colleague from the button below.</p>
+  <a class="btn btn-primary btn-lg" asp-controller="Employee" asp-action="Index" role="button">My colleague</a>
 </div>
