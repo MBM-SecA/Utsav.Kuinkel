@@ -18,13 +18,24 @@ public class EmployeeController : Controller
         return View(employees);
     }
 
-    public ActionResult Detail(int id)
+    public ActionResult Detail([FromQuery] int id)
     {
         List<Person> employees = Person.GetPerson();
         var employee = from person in employees where person.Id == id select person;
         // Console.Write(employee.First());
         var requestedEmployee = employee.First();
         return View(requestedEmployee);
+    }
+
+    public ActionResult Add()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public ActionResult<string> Add([FromForm] Person person)
+    {
+        return "Recorded Successfully!!!";
     }
 
 

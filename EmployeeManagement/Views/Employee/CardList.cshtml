@@ -2,8 +2,9 @@
 @{
   string female = "~/image/female-avatar.png";
   string male = "~/image/male-avatar.png";
-
+  ViewData["Title"] = "Card View";
 }
+<h1 class ="d-inline" >All Employee - Card View </h1><a asp-controller="Employee" asp-action="Index"><button type="button" class="btn btn-outline-primary float-right" >List View</button></a>
 <div class="card-columns">
 @foreach (var employee in Model)
 {
