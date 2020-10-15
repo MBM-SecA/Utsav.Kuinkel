@@ -20,7 +20,9 @@ namespace EmployeeManagement.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            List<Person> employees = Person.GetPerson();
+            return View(employees);
+
         }
 
         public IActionResult Privacy()

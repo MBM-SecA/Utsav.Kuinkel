@@ -18,7 +18,7 @@ public class EmployeeController : Controller
         return View(employees);
     }
 
-    public ActionResult Detail([FromQuery] int id)
+    public ActionResult Detail(int id)
     {
         List<Person> employees = Person.GetPerson();
         var employee = from person in employees where person.Id == id select person;
