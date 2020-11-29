@@ -6,21 +6,24 @@ using System.Linq;
 
 public class EmployeeController : Controller
 {
+    private readonly EMSContext db;
+
+    public EmployeeController(EMSContext _db) => db = _db;
     public ActionResult Index()
     {
-        List<Person> employees = Person.GetPerson();
+        var employees = db.People.ToList();
         return View(employees);
     }
 
     public ActionResult CardList()
     {
-        List<Person> employees = Person.GetPerson();
+        var employees = db.People.ToList();
         return View(employees);
     }
 
     public ActionResult Detail(int id)
     {
-        List<Person> employees = Person.GetPerson();
+        var employees = db.People.ToList();
         var employee = from person in employees where person.Id == id select person;
         // Console.Write(employee.First());
         var requestedEmployee = employee.First();
