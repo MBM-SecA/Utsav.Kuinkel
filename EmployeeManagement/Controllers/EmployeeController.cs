@@ -42,4 +42,21 @@ public class EmployeeController : Controller
         db.SaveChanges();
         return RedirectToAction(nameof(Index));
     }
+
+    public ActionResult Edit(int id)
+    {
+        var employee = db.People.Find(id);
+        return View(employee);
+    }
+
+    [HttpPost]
+    public ActionResult<string> Edit([FromForm] Person person)
+    {
+        db.People.Attach(person);
+        db.People.Update(person);
+        db.SaveChanges();
+        return RedirectToAction(nameof(Index));
+    }
+
+
 }
