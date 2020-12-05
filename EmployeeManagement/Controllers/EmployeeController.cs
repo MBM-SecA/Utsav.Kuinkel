@@ -23,10 +23,10 @@ public class EmployeeController : Controller
 
     public ActionResult Detail(int id)
     {
-        var employees = db.People.ToList();
-        var employee = from person in employees where person.Id == id select person;
+        var employee = db.People.Find(id);
+        // var employee = from person in employees where person.Id == id select person;
         // Console.Write(employee.First());
-        var requestedEmployee = employee.First();
+        var requestedEmployee = employee;
         return View(requestedEmployee);
     }
 
@@ -38,9 +38,8 @@ public class EmployeeController : Controller
     [HttpPost]
     public ActionResult<string> Add([FromForm] Person person)
     {
-        return "Recorded Successfully!!!";
+        db.People.Add(person);
+        db.SaveChanges();
+        return RedirectToAction(nameof(Index));
     }
-
-
-
 }
