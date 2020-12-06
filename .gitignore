@@ -351,3 +351,4 @@ MigrationBackup/
 
 #sqli database
 .db
+EmployeeManagement/Ems.db
