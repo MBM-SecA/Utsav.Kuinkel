@@ -1,0 +1,22 @@
+@model Department
+@{
+  ViewData["Title"] = @Model.Id;
+}
+<h1>Are you sure you want to delete ?</h1>
+<div class="jumbotron">
+  <h1 class="display-4">@Model.DepartmentName</h1>
+  <p class="lead">
+  <ul class="list-group">
+    <li class="list-group-item">Name : @Model.DepartmentName</li>
+    <li class="list-group-item">Code : @Model.Code</li>
+    <li class="list-group-item">Description : @Model.Description</li>
+    <li class="list-group-item">Start date : @Model.StartDate </li>
+  </ul>
+  </p>
+  <hr class="my-4">
+  <form asp-controller="Department" asp-action="Delete" method="POST">
+    <input asp-for="Id" hidden>
+    <button type="submit" class="btn btn-primary-danger">Delete Department</button>
+  </form>
+
+</div>
