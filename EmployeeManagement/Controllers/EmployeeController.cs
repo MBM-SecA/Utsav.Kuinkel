@@ -63,6 +63,7 @@ public class EmployeeController : Controller
         var employee = db.People.Find(id);
         return View(employee);
     }
+
     [HttpPost]
     public ActionResult Delete(Person person)
     {
