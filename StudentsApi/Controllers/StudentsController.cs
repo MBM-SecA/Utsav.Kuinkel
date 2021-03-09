@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using System.Text
+using System.Text.Json;
+using System.Linq;
 
 
 [Route("students")]
@@ -21,11 +22,11 @@ public class StudentController: ControllerBase
 
     [HttpGet]
     [Route("{name}")]
-    public ActionResult GetStudentsById(sringt name)
+    public ActionResult GetStudentsById(string name)
     {
         var students = new string[] {"Utsav", "Kusum", "Pandey"};
 
-        var student = students.Where(x => x == name).FirstOrDefault;
+        var student = students.Where(x => x == name).FirstOrDefault();
         if(student == null){
             return BadRequest();
         }
@@ -33,7 +34,7 @@ public class StudentController: ControllerBase
     }
 
 
-    [HttPost]
+    [HttpPost]
     [Route("add")]
     public ActionResult CreateStudent(Student student)
     {
