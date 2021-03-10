@@ -14,6 +14,17 @@
       "cwd": "${workspaceFolder}",
       "stopAtEntry": false,
       "console": "internalConsole"
+    },
+    {
+      "name": "State Management",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/StateMangement/bin/Debug/net5.0/StateMangement.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/StateMangement",
+      "stopAtEntry": false,
+      "console": "internalConsole"
     }
   ]
 }
