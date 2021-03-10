@@ -28,7 +28,7 @@ namespace StudentsApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<StudentsContext>(options => options.UseSqlite("studemt.db"));
+            services.AddDbContext<StudentsContext>(options => options.UseSqlite(@"Data Source=student.db"));
             services.AddControllers();
         }
 

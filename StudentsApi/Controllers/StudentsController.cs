@@ -7,16 +7,17 @@ using System.Linq;
 [ApiController]
 public class StudentController: ControllerBase
 {
+    private readonly StudentsContext db;
+     public StudentController(StudentsContext _db){
+
+            db = _db;
+        }
+
     [HttpGet]
     [Route("all")]
     public ActionResult GetAllStudents()
     {
-        var students = new string[] {"Utsav", "Kusum", "Pandey"};
-
-        students = null;
-        if(students == null){
-            return BadRequest();
-        }
+        var students = db.Student.ToList();
         return Ok(students);
     }
 
@@ -24,9 +25,9 @@ public class StudentController: ControllerBase
     [Route("{name}")]
     public ActionResult GetStudentsById(string name)
     {
-        var students = new string[] {"Utsav", "Kusum", "Pandey"};
+        var students = db.Student.ToList();
 
-        var student = students.Where(x => x == name).FirstOrDefault();
+        var student = students.Where(x => x.Name == name).FirstOrDefault();
         if(student == null){
             return BadRequest();
         }
